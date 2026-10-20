@@ -2,6 +2,7 @@ import { Composition, Folder } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import { NeoDesignSystem, NEO_DESIGN_SYSTEM_DURATION_IN_FRAMES } from "./NeoDesignSystem/NeoDesignSystem";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -34,6 +35,14 @@ export const RemotionRoot: React.FC = () => {
           }}
         />
       </Folder>
+      <Composition
+        id="NeoDesignSystem"
+        component={NeoDesignSystem}
+        durationInFrames={NEO_DESIGN_SYSTEM_DURATION_IN_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
       <Composition
         // You can take the "id" to render a video:
         // bunx remotion render HelloWorld
